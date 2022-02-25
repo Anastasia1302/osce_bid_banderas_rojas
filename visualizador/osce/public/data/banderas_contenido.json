@@ -1,0 +1,116 @@
+{
+    "bandera_1":    {
+                        "nombre": "1",
+                        "descripcion": "Número de versiones de PAC es demasiado alto",
+                        "metodologia": "Para cada convocatoria, en un periodo de tiempo dado (enero-febrero 2020) se mira el # de versiones en el PAC, se identifica la pertinencia del ente convocante a uno de 5 grupos de acuerdo con lo presupuestado, se computa la media y el desvío estándar (SD) dentro de cada grupo. Se marcan con bandera roja convocatorias para las que el # de versiones es superior a la media + 2SDs dentro de cada grupo.",
+                        "etapa": "Planificación"
+                    },
+    "bandera_2":    {
+                        "nombre": "2",
+                        "descripcion": "El proceso realiza un ente que tiene una alta proporción de contratación directa",
+                        "metodologia": "Para un periodo de tiempo dado (12 meses), para un ítem-cubso listado en la convocatoria, para todos los entes, contar el número total de convocatorias y el número de convocatorias con contratación directa. Encontrar la media, SD de la proporción de contratación directa (# directa/#todos) para cada uno de los entes y para el total de los entes. Marcar con la bandera roja si al menos para un ítemcubso este ente tiene la proporción de contratación directa superior a la media. No considerar los ítemcubso para los que la proporción de contratación directa para todos entes es superior a 90% (mercados no competitivos).",
+                        "etapa": "Convocatoria"
+                    },
+    "bandera_8": {
+                        "nombre": "8",
+                        "descripcion": "Se ha adjudicado buena pro, a pesar de que antes hubo denuncia o dictamen que indica que se declare la nulidad del procedimiento",
+                        "metodologia": "Para cada convocatoria, conectar con la tabla de Adjudicaciones, verificar que el estado ítem es Consentido, Apelado, Contratado, Adjudicado, verificar si la convocatoria está en la pestaña ASO2021 o DICT2021 de la tabla DGR, de ser así, verificar que, en el caso de ASO, se indica “Nulidad” en la columna “Disposición”, y en caso de DICT, la Conclusión final es “Fundado”. De ser así, mirar la Fecha Oficio (ASO)  y fecha emisión del dictamen (DICT). Si esta fecha es anterior a la fecha de consentimiento de buena pro, levantar la bandera. ",
+                        "etapa": "Presentación de propuestas"
+                    },
+    "bandera_21": {
+                        "nombre": "21",
+                        "descripcion": "Adjudicación con el tipo de proceso de selección diferente al planificado",
+                        "metodologia": "Para cada convocatoria, se verifica si el tipo de proceso de selección indicado en Adjudicaciones es el mismo que PAC. Si no es así se levanta la bandera roja. ",
+                        "etapa": "Adjudicación"
+                    },
+    "bandera_3": {
+                        "nombre": "3",
+                        "descripcion": "El número de días entre  fecha de convocatoria y fecha de presentación de propuestas es inferior al marcado en legislación",
+                        "metodologia": "Computar el número de días transcurridos entre la fecha de convocatoria y fecha de presentación de propuestas. Este número de días tiene que ser inferior a:  \n-    Licitación y Concurso público: 22 días (es decir, si la fecha de convocatoria es 1 de noviembre, se marcará con bandera roja si la fecha de presentación de propuestas es el 21 o antes)\n-    Contratación directa: NO APLICA\nConsultoría individual: 5 días\nAdjudicación simplificada: 3 días\nSubasta inversa electrónica: NO APLICA  o 5 días?\nComparación de precios: NO APLICA\nSe pone NA si no se pude construir la bandera",
+                        "etapa": "Convocatoria"
+                    },
+    "bandera_3a": {
+                        "nombre": "3a",
+                        "descripcion": "El tiempo transcurrido entre fecha de convocatoria y fecha de presentación de propuestas es demasiado largo",
+                        "metodologia": "Para un periodo de tiempo dado (12 meses), para cada convocatoria, computar el número de días transcurridos entre la fecha de convocatoria y fecha de presentación de propuestas, por cada tipo de proceso de selección, computar la media y desvió estándar (SD). Marcar con la bandera roja si, para esta convocatoria, el tiempo es superior a la media + 2SD. ",
+                        "etapa": "Convocatoria"
+                    },
+    "bandera_17": {
+                        "nombre": "17",
+                        "descripcion": "El tiempo transcurrido entre buena pro y consentimiento de buena pro es inferior al límite marcado por la legislación",
+                        "metodologia": "Solo para procedimientos en los que hay más de 1 postor, para cada convocatoria, se computa el tiempo transcurrido en días entre la buena pro y el consentimiento de buena pro. Se levanta la bandera si el número de días es inferior a:\n-    Concurso público: 8+1 días (es decir, si la fecha de buena pro es 1 de noviembre, levantamos la bandera si el consentimiento de buena pro es 9 de noviembre o antes). \nContratación directa: 5+1 días\nConsultoría individual: 5+1 días\nAdjudicación simplificada: 5+1 días\nSubasta inversa electrónica: 5+1 días\nComparación de precios: 5+1 días",
+                        "etapa": "Adjudicación"
+                    },
+    "bandera_22": {
+                        "nombre": "22",
+                        "descripcion": "El plazo transcurrido entre el consentimiento de buena pro y suscripción del contrato es demasiado largo",
+                        "metodologia": "Para cada convocatoria, se computa el tiempo transcurrido en días entre el consentimiento de buena pro y la fecha de suscripción del contrato. Se marca con la bandera roja si el número de días es superior a 16 días. Se aplica a todos procesos de selección excluyendo la contratación directa. En la ficha de bandera, indicar que la fecha relevantes es “fecha de publicación del consentimiento de buena pro”. Por ejemplo, si el consentimiento de buena pro es el día 1 de noviembre, marcamos con bandera roja si la suscripción del contrato es el día 17 o más tarde. ",
+                        "etapa": "Contrato"
+                    },
+    "bandera_4": {
+                        "nombre": "4",
+                        "descripcion": "No se dispone de la información sobre el postor (la convocatoria no cuenta con postores) en una convocatoria adjudicada",
+                        "metodologia": "Se hace el cruce entre tablas Convocatoria, Adjudicación y Postor, se verifica que el número de la convocatoria adjudicada no está en la tabla Postor ",
+                        "etapa": "Presentación de propuestas"
+                    },
+    "bandera_4a": {
+                        "nombre": "4a",
+                        "descripcion": "Numero de participantes es sustancialmente mayor que el número de postores",
+                        "metodologia": "Se hace el cruce entre tablas Convocatoria, Participantes y Postor, por tipo de proceso de selección, se computa la proporción de postores por participantes (es decir, se computa el ratio #postores/#participantes). Para cada tipo de procedimiento, en un periodo de tiempo dado (12 meses), computamos la media y el desvió estándar (SD). Si se observa que, en una convocatoria dada, la proporción es inferior a la media menos 2SD, levantamos la bandera roja. Por ejemplo, si en promedio 10% de participantes acaban siendo postores, levantamos la bandera para un proceso en el cual esta proporción es inferior a 1% (10% - 2*10%*90%=1%)",
+                        "etapa": "Presentación de propuestas"
+                    },
+    "bandera_5": {
+                        "nombre": "5",
+                        "descripcion": "Se ha hecho contratación directa con un postor que nunca antes había tenido contrato como proveedor del sector público",
+                        "metodologia": "Solo para la contratación directa, para cada convocatoria, para cada contrato, buscamos RUCs de los postores (en la tabla de adjudicaciones) en contratos previos a la fecha de esta convocatoria. Si no encontramos, levantamos la bandera roja. Se mira desde enero 2018 hasta la fecha del registro de la propuesta del postor.  ",
+                        "etapa": "Presentación de propuestas"
+                    },
+    "bandera_5a": {
+                        "nombre": "5a",
+                        "descripcion": "Se presenta un postor que nunca había ganado en un proceso de compras públicas para este grupo de ítems",
+                        "metodologia": "Para cada convocatoria, para cada postor, anotamos el grupo de ítem que corresponde,  buscamos el RUC de postor en tabla Contratos, previos a la fecha de esta convocatoria. Si no hay ningún contrato para este mismo grupo, levantamos la bandera roja. Se mira desde enero 2018 hasta la fecha del registro de la propuesta del postor.  ",
+                        "etapa": "Presentación de propuestas"
+                    },
+    "bandera_13": {
+                        "nombre": "13",
+                        "descripcion": "Se ha hecho la adjudicación a un ganador no habido no hallado. ",
+                        "metodologia": "Para cada adjudicación, mirar RUC_CODIGO_GANADOR, verificar si el ganador se encuentra en la tabla facilitada por SUNAT, y si se encuentra allí, se levanta la bandera si su estado es no habido o no hallado. Para ganadores no encontrados en la base SUNAT se propone mostrar No aplica (NaN).",
+                        "etapa": "Presentación de propuestas"
+                    },
+    "bandera_16": {
+                        "nombre": "16",
+                        "descripcion": "A una convocatoria se presentó un postor que consistentemente gana contratos con este ente convocante",
+                        "metodologia": "Para cada convocatoria, identificar la combinación ente-postor-familia. Para cada combinación, en un periodo de tiempo dado (2018-2020), contar el número total de convocatorias (a las que postor postuló), contar el número total de contratos (en los que el postor ganó). Computar # contratos donde ganó/#convocatorias donde postuló. Marcar con bandera roja el proceso si, al menos para una combinación postor-ente-familia, #contratos/#convocatorias > 50%, es decir, el postor había ganado en más de la mitad de los procesos.",
+                        "etapa": "Presentación de propuestas"
+                    },
+    "bandera15": {
+                        "nombre": "15",
+                        "descripcion": "El monto del postor es demasiado cercano al monto referencial",
+                        "metodologia": "Solo para bienes y servicios, para cada convocatoria, miramos el monto referencial ítem, encontramos los postores, seleccionamos convocatorias con un único postor, miramos el monto propuesto por el postor en la tabla Postor. Si el monto del postor es +/- 3% del monto referencial, marcamos con la bandera roja",
+                        "etapa": "Presentación de propuestas"
+                    },
+    "bandera19": {
+                        "nombre": "19",
+                        "descripcion": "El monto adjudicado por unidad (precio unitario) es superior al valor histórico",
+                        "metodologia": "Solo para bienes, para cada adjudicación, para cada itemcubso (no usamos familia) y tipo de procedimiento, en un periodo de tiempo dado (últimos 2 meses) se computa el promedio y desvíos estándar (SD) del monto por ítem. Se marca con bandera roja la adjudicación si, al menos para un itemcubso el monto adjudicado es superior a la media + 2SD. En la ficha de bandera mostrar códigos de procedimientos en los que se adquirió este mismo itemcubso. ",
+                        "etapa": "Adjudicación"
+                    },
+    "bandera_23a": {
+                        "nombre": "23a",
+                        "descripcion": "Hubo modificaciones en el monto contratado muy cercanos al límite permitido",
+                        "metodologia": "Para cada monto_contratado_item , computar: \nmonto_adicional / monto_contratado_item\nmonto_reducción/ monto_contratado_item\nmonto_complementario / monto_contratado_item. \n\nSolo para bienes y servicios: \nMarcar con la bandera roja si el ratio esta entre:\n(i) 23% y 25%, inclusive, para todos procesos de selección\n(ii) 23% y 25%, inclusive, para todos procesos de selección \n(iii) 23% y 25%, inclusive, excluir contratación directa\n\nPara obras, para todos procesos de selección: \nMarcar con la bandera roja si el ratio esta entre:\n(i) 47%-50%, inclusive\n(ii) 47%-50%, inclusive\n(iii) 47%-50%, inclusive\n\nNo considerar supervisión de obras (no hay límite establecido)",
+                        "etapa": "Ejecución"
+                    },
+    "bandera_27": {
+                        "nombre": "27",
+                        "descripcion": "El monto con el cual el proveedor ganador postuló es mayor al monto contratado",
+                        "metodologia": "Para cada contrato, para cada proveedor, mirar el MONTO_CONTRATADO_ITEM y comparar este valor con MONTO en la tabla Postor. Si MONTO en la tabla Postor es superior al MONTO_CONTRATADO_ITEM  para este proveedor, levantar la bandera. ",
+                        "etapa": "Contrato"
+                    },
+    "bandera_29": {
+                        "nombre": "29",
+                        "descripcion": "La diferencia entre el monto de referencia en convocatoria y monto contratado es excesiva",
+                        "metodologia": "Solo para bienes y servicios, para cada convocatoria, para cada contrato, para cada ítem, comparar MONTO_CONTRATADO_ITEM en la tabla Contratos y MONTO_REFERENCIAL_ITEM en la tabla Convocatoria. Levantar la bandera si (i) MONTO_CONTRATADO_ITEM es 30% mayor que MONTO_REFERENCIAL_ITEM (umbral BM)",
+                        "etapa": "Contrato"
+                    }
+}

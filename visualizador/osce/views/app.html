@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>visualizador de banderas rojas</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <div class="navbar-yellow">
+        <div class="call-to-action-content">
+            <button type="button" class="call-to-action" data-bs-toggle="modal" data-bs-target="#materialesModal">
+                Ver Materiales adicionales
+            </button>
+            <button type="button" class="call-to-action" data-bs-toggle="modal" data-bs-target="#glosarioModal">
+                Ver glosario de banderas
+            </button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="card bg-secondary p-2 text-dark bg-opacity-10 mt-4">
+            <div class="card-body">
+                <h5>Buscador de convocatorias:</h5>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="nombreentidad">
+                            <input type="text" class="form-control" id="input-nombreentidad" placeholder="#">
+                            <label for="floatingInput">Nombre de la entidad</label>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="ruc">
+                            <input type="text" class="form-control" id="input-ruc" placeholder="#">
+                            <label for="floatingInput">RUC de la entidad</label>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="descripcion">
+                            <input type="text" class="form-control" id="input-descripcion" placeholder="#">
+                            <label for="floatingInput">Descripción del objeto</label>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="proceso">
+                            <input type="text" class="form-control" id="input-proceso" placeholder="#">
+                            <label for="floatingInput">Proceso</label>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="codigoconvocatoria">
+                            <input type="text" class="form-control" id="input-codigo-convocatoria" placeholder="#">
+                            <label for="floatingInput">Código de convocatoria</label>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="anio">
+                            <input type="text" class="form-control" id="input-anio" placeholder="#">
+                            <label for="floatingInput">Año de la convocatoria</label>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="objetocontractual">
+                            <select class="form-select" id="select-objetocontractual" aria-label="Seleccione una opción">
+								<option selected>Seleccione una opción</option>								
+							</select>
+                            <label for="floatingSelect">Objeto de contratación</label>
+                            <button type="button" class="btn-close has-right-control" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="sector">
+                            <select class="form-select" id="select-sector" aria-label="Seleccione una opción">
+								<option selected>Seleccione una opción</option>
+							</select>
+                            <label for="floatingSelect">Sector</label>
+                            <button type="button" class="btn-close has-right-control" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="tipoprocesoseleccion">
+                            <select class="form-select" id="select-tipoprocesoseleccion" aria-label="Seleccione una opción">
+								<option selected>Seleccione una opción</option>								
+							</select>
+                            <label for="floatingSelect">Tipo de proceso de selección</label>
+                            <button type="button" class="btn-close has-right-control" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="flag">
+                            <select class="form-select" id="select-flags" aria-label="Seleccione una opción">
+								<option selected>Seleccione una opción</option>
+							</select>
+                            <label for="floatingSelect">Bandera</label>
+                            <button type="button" class="btn-close has-right-control" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating" data-filter="date">
+                            <input type="number" class="form-control bg-white" id="calendar-range" placeholder="#">
+                            <label for="floatingInput">Seleccione rango de fechas</label>
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-12 mt-2">
+                        <div class="form-floating two-range-slider js-two-range-slider" data-filter="amount">
+                            <input id="amount-range-max" type="range" min="1000" max="20000" value="20000" step="100" class="two-range-slider__input js-two-range-slider-input">
+                            <input id="amount-range-min" type="range" min="1000" max="20000" value="1000" step="100" class="two-range-slider__input js-two-range-slider-input">
+                            <div class="two-range-slider__output">
+                                <output class="two-range-slider__value js-two-range-slider-min-value"></output>
+                                <output class="two-range-slider__value js-two-range-slider-max-value"></output>
+                            </div>
+                            <button type="button" class="btn-close top" aria-label="Close"></button>
+                        </div>
+                    </div>
+                </div>
+                <span id="flag-description"></span>
+            </div>
+        </div>
+        <div class="card mt-4 mb-4 border-0">
+            <h5 class="mt-2 mb-3">Convocatorias:</h5>
+            <div class="table-responsive-lg">
+                <table class="table table-bordered m-0">
+                    <thead class="thead-yellow">
+                        <tr>
+                            <th scope="col" class="table-header center middle cursor-pointer w-small" data-field="code">
+                                <span>Código de convocatoria</span>
+                                <img src="image/down_arrow.png" alt="Sort">
+                            </th>
+                            <th scope="col" class="table-header center middle cursor-pointer w-large" data-field="entity">
+                                <span>Nombre de la entidad</span>
+                                <img src="image/down_arrow.png" alt="Sort">
+                            </th>
+                            <th scope="col" class="table-header center middle cursor-pointer w-medium" data-field="type">
+                                <span>Tipo de proceso de selección</span>
+                                <img src="image/down_arrow.png" alt="Sort">
+                            </th>
+                            <th scope="col" class="table-header center middle cursor-pointer w-small" data-field="amount">
+                                <span>Monto total</span>
+                                <img src="image/down_arrow.png" alt="Sort">
+                            </th>
+                            <th scope="col" class="table-header center middle cursor-pointer w-small" data-field="flag">
+                                <span>Número de banderas</span>
+                                <img src="image/down_arrow.png" alt="Sort">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="call-list"></tbody>
+                </table>
+            </div>
+            <div class="row mt-3" id="paginator"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="materialesModal" tabindex="-1" aria-labelledby="materialesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mt-2">Materiales adicionales:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>Tabla banderas para entes:
+                            <strong>
+								<a class="" href="data/banderas_rojas_entidades_06Jan2022.xlsx" download>Clic para descargar excel</a>
+							</strong>
+                        </li>
+                        <li>Tabla frecuencias de las banderas:
+                            <strong>
+								<a class="" href="data/banderas_rojas_cuadro_ppt_04Jan2021.xlsx" download>Clic para descargar excel</a>
+							</strong>
+                        </li>
+                        <li>Metodología de banderas rojas - modelo de riesgos:
+                            <strong>
+								<a class="" href="data/metodologia_banderas_rojas.pdf" download>Clic para descargar documento</a>
+							</strong>
+                        </li>
+                    </ul>
+                    <h5 class="modal-title mt-4 mb-2">Video instructivo sobre este visualizador:</h5>
+                    <video class="mt-2" width="100%" height="320" controls>
+						<source src="video/visualizador_banderas-rojas.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="glosarioModal" tabindex="-1" aria-labelledby="glosarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mt-2">Glosario de banderas:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-bordered custom-striped mt-3">
+                        <thead class="thead-yellow">
+                            <tr>
+                                <th class="table-header-modal center middle" scope="col"><span>Bandera</span></th>
+                                <th class="table-header-modal center middle" scope="col"><span>Descripción</span></th>
+                                <th class="table-header-modal center middle" scope="col"><span>Etapa</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="flags-list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script type="module" src="./js/scripts.js"></script>
+    <script>
+        const twoRangeSlider = (() => {
+            const rangeCheck = (rangeInputs, rangeMinOutput, rangeMaxOutput) => {
+                const rangeMin = rangeInputs[0].min ? rangeInputs[0].min : 0;
+                const rangeMax = rangeInputs[0].max ? rangeInputs[0].max : 100;
+                let rangeMinValue = parseInt(rangeInputs[1].value);
+                let rangeMaxValue = parseInt(rangeInputs[0].value);
+
+                rangeMinValue = Math.min(Math.max(rangeMinValue, rangeMin), rangeMaxValue);
+
+                // Calculate the percentage of the background where the thumb is
+                const rangeMinPercentage = Number(
+                    ((rangeMinValue - rangeMin) * 100) / (rangeMax - rangeMin));
+                const rangeMaxPercentage = Number(
+                    ((rangeMaxValue - rangeMin) * 100) / (rangeMax - rangeMin));
+
+                // Update the background to reflect the change
+                rangeInputs[0].style.background = `linear-gradient(to right,#9ca3a5 ${rangeMaxPercentage}%, #c4c8ca ${rangeMaxPercentage}%)`;
+                rangeInputs[1].style.background = `linear-gradient(to right,#c4c8ca ${rangeMinPercentage}%, transparent ${rangeMinPercentage}%)`;
+
+                // Update value on screen
+                rangeMinOutput.innerHTML = `Min: S/ ${parseFloat(rangeMinValue).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}`;
+                rangeMaxOutput.innerHTML = `Max: S/ ${parseFloat(rangeMaxValue).toFixed(2).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")}`;
+            };
+
+            const bindComponent = (item) => {
+                const rangeInputs = item.querySelectorAll('.js-two-range-slider-input');
+                const rangeMinOutput = item.querySelector('.js-two-range-slider-min-value');
+                const rangeMaxOutput = item.querySelector('.js-two-range-slider-max-value');
+
+                item.addEventListener("input", () => {
+                    rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
+                });
+
+                rangeCheck(rangeInputs, rangeMinOutput, rangeMaxOutput);
+            };
+
+            const init = () => {
+                const rootEl = document.getElementsByClassName("js-two-range-slider");
+                [...rootEl].forEach((item) => bindComponent(item));
+            };
+
+            return {
+                init
+            };
+        })();
+        twoRangeSlider.init();
+    </script>
+</body>
+
+</html>
