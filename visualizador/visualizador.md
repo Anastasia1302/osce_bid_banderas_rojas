@@ -2,7 +2,7 @@
 
 ## Descripción del proyecto 
 
-El proyecto involucró un análisis constante de la necesidad presentada por el cliente; por tanto, la solución es a medida. Ante esta premisa, los desafíos que involucraron el resultado obtenido ha conllevado plantear una arquitectura de software que se adapte a la etapa previa del análisis de datos y a la proyección de estos datos en una plataforma amigable e intuitiva. 
+El proyecto involucró un análisis constante de la necesidad presentada por el cliente; por tanto, la solución es a medida. Ante esta premisa, los desafíos que involucraron el resultado obtenido ha conllevado el planeamiento de una arquitectura de software que se adapte a la etapa previa del análisis de datos y a la proyección de estos datos en una plataforma amigable e intuitiva. 
 
 </br>
 
@@ -40,6 +40,8 @@ En el archivo HTML se vinculará la fuente de Google que se empleará, se vincul
 En el archivo CSS se insertarán los estilos como la definición de la fuente, tamaños de las letras, disposición de espacios entre los elementos y la incorporación de los colores acorde a los analizados en las plataformas del cliente. 
 
 Como resumen, el uso de Excel es vital para obtener el archivo que insertaremos en el proyecto. El uso de PowerPoint es útil debido a que es la fuente de la información tras los talleres que se llevaron en diferentes sesiones con el cliente y tiene como fuente de información la descripción de las banderas y sus metodologías aplicadas. Visual Studio Code es la herramienta principal que permitió el desarrollo de la solución y facilita la escritura de código y juntamente con las extensiones propias del software facilitó por ejemplo el despliegue del proyecto en un servidor local. Así también, la consola de comandos utilizado es la que provee Visual Studio Code. Finalmente, el uso de Google Chrome refleja los cambios ingresados por código y haciendo uso del inspector del navegador, facilitó la adaptación de los cambios y ajustes en la aplicación. 
+
+</br>
 
 ![Diagrama](images/diagrama.png)
 **Figura 3:** Esquema de la solución
